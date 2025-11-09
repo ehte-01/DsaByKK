@@ -89,7 +89,7 @@ public class LinearSearch {
           int target=sc.nextInt();
           System.out.println(search(arr,target,0));
           System.out.println(findIndex(arr,target,0));
-          System.out.println(findLastIndex(arr,target,arr.length));
+          System.out.println(findLastIndex(arr,target,arr.length-1));
           findAllIndex(arr,target,0);
           System.out.println(list);
           System.out.println(findAllIndexWithList(arr,target,0, new ArrayList<>()));
