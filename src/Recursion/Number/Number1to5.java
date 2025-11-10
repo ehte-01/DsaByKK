@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Number;
 
 public class Number1to5 {
     public static void main(String[] args) {
