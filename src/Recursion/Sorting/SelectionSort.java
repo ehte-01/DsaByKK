@@ -1,33 +1,29 @@
 package Recursion.Sorting;
 
+import java.util.Arrays;
+
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {5, 3, 6, 2, 1, 4};
-        sort(arr);
-
-        System.out.println("Sorted array:");
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
+        selection(arr, arr.length, 0, 0);
+        System.out.println(Arrays.toString(arr));
     }
 
-    static void sort(int[] arr) {
-        int n = arr.length;
-
-        for (int i = 0; i < n - 1; i++) {
-            int minIndex = i; // Assume the current index is the smallest
-
-            // Find the minimum element in the remaining unsorted array
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
-                }
+    static void selection(int[] arr, int r, int c, int max) {
+        if (r == 0) {
+            return;
+        }
+        if (c < r) {
+            if (arr[c] > arr[max]) {
+                selection(arr, r, c + 1, c);
+            } else {
+                selection(arr, r, c + 1, max);
             }
-
-            // Swap the found minimum element with the first element
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+        } else {
+            int temp = arr[max];
+            arr[max] = arr[r - 1];
+            arr[r - 1] = temp;
+            selection(arr, r - 1, 0, 0);
         }
     }
 }
