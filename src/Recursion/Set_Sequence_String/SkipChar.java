@@ -2,7 +2,7 @@ package Recursion.Set_Sequence_String;
 
 public class SkipChar {
     public static void main(String[] args) {
-        skip("", "baccad", 'a');
+        skip("", "bakra", 'a');
     }
 
     static void skip(String processed, String unprocessed, char target) {
