@@ -133,5 +133,10 @@ public class LL {
             this.next = next;
         }
 
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
+
     }
 }

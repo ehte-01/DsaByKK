@@ -19,6 +19,8 @@ public class LLMain {
         list.display();
         System.out.println(list.delete(2));
         list.display();
+        System.out.println(list.find(23));
+        list.display();
 
     }
 }
