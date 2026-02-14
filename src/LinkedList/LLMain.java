@@ -12,7 +12,12 @@ public class LLMain {
         list.insertlast(1);
         list.insertlast(0);
         list.insert(23,2);
-
+        list.display();
+        System.out.println(list.deleteFirst());
+        list.display();
+        System.out.println(list.deleteLast());
+        list.display();
+        System.out.println(list.delete(2));
         list.display();
 
     }
