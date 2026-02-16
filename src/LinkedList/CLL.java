@@ -36,6 +36,13 @@ public class CLL {
             tail = null;
             return;
         }
+
+
+
+
+
+
+
         if (node.val == val){
             head = head.next;
             tail.next = head;
