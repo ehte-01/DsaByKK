@@ -11,6 +11,8 @@ public class CLLMain {
         cll.display();
         cll.delete(34);
         cll.display();
+        cll.delete(45);
+        cll.display();
 
     }
 }
