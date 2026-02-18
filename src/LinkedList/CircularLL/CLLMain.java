@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.CircularLL;
 
 public class CLLMain {
     public static void main(String[] args) {

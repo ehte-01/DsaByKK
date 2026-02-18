@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.DoubleLinkedList;
 
 public class DDL {
 

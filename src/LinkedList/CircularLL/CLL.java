@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.CircularLL;
 
 public class CLL {
 

@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SingleLinkedList;
 
 public class LLMain {
 
