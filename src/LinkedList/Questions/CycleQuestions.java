@@ -1,5 +1,7 @@
 package LinkedList.Questions;
 
+import java.util.Scanner;
+
 public class CycleQuestions {
 
      public boolean hasCycle(ListNode head) {
@@ -76,6 +78,50 @@ public class CycleQuestions {
         return s;
     }
 
+    // Happy Number
+
+    public boolean isHappy (int n) {
+
+         int slow = n;
+         int fast = n;
+
+         do {
+             slow = findSquare(slow);
+             fast = findSquare(findSquare(fast));
+         } while (slow != fast);
+
+         if (slow == 1) {
+             return true;
+         }
+
+         return false;
+    }
+
+    private int findSquare(int number) {
+
+         int ans = 0;
+         while (number > 0) {
+             int rem = number % 10 ;
+             ans += rem * rem;
+             number = number / 10;
+         }
+         return ans;
+
+    }
+
+    // Middle of the linked list
+
+    public static ListNode middleNode(ListNode head) {
+
+         ListNode f = head;
+         ListNode s = head;
+
+         while (f != null && f.next != null) {
+             f = f.next.next;
+             s = s.next;
+         }
+         return s;
+    }
 
 
      static class ListNode {
@@ -90,9 +136,27 @@ public class CycleQuestions {
 
     public static void main(String[] args) {
 
+         Scanner sc = new Scanner(System.in);
+         int n = sc.nextInt();
+          if (n == 0) {
+              System.out.println("List is empty");
+              return;
+          }
+
+          ListNode head = new ListNode(sc.nextInt());
+          ListNode current = head;
+
+          for (int i = 1; i < n; i++) {
+              current.next = new ListNode(sc.nextInt());
+              current = current.next;
+          }
+
+          ListNode middle = middleNode(head);
+          System.out.println(middle.val);
+
         CycleQuestions list = new CycleQuestions();
 
-        ListNode head = new ListNode(3);
+       // ListNode head = new ListNode(3);
         ListNode second = new ListNode(2);
         ListNode third = new ListNode(0);
         ListNode fourth = new ListNode(-1);
