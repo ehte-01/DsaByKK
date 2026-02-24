@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.Sorting;
 
 import java.util.Scanner;
 
